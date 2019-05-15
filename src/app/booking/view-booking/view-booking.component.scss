@@ -1,0 +1,26 @@
+// form {
+//   padding: 20px;
+
+//   .form-group {
+
+//     .control-label {
+//       font-family: 'Montserrat', sans-serif;
+//       font-size: 14px;
+//     }
+
+//     .control-label:first-child {
+//       width: 10%;
+//       float: left;
+//       font-weight: 600;
+//     }
+//   }
+// }
+
+form.example-container.ng-pristine.ng-invalid.ng-touched {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.mat-form-field-infix {
+  width: 100%;
+}

@@ -1,0 +1,36 @@
+<div class="listing">
+  <h1>List Bookings</h1>
+  <div class="create-booking">
+        <button mat-raised-button color="primary" (click)="createBooking()">Create Booking</button>
+  </div>
+  <div class="listing-table">
+      <table class="table table-bordered">
+        <thead>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Room Type</th>
+          <th>Check In</th>
+          <th>Check Out</th>
+          <th>Pickup Address</th>
+          <th>Action</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let booking of allBookings">
+            <td>{{booking.name}}</td>
+            <td>{{booking.email}}</td>
+            <td>{{booking.roomType}}</td>
+            <td>{{booking.checkIn | date: 'medium'}}</td>
+            <td>{{booking.checkOut | date: 'medium'}}</td>
+            <td>{{booking.pickupAddress}}</td>
+            <td>
+              <button mat-raised-button color="primary" (click)="viewBooking(booking)">View</button>
+              <button mat-raised-button color="warn" (click)="deleteBooking(booking)">Delete</button>
+            </td>
+          </tr>
+          <tr *ngIf="allBookings.length === 0">
+              <td colspan="7" class="text-center">No Bookings Available</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>

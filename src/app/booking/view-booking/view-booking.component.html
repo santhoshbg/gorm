@@ -1,0 +1,30 @@
+<form>
+  <div class="form-group">
+    <div class="control-label">Name:</div>
+    <div class="control-label">{{bookingData.name}}</div>
+  </div>
+  <div class="form-group">
+    <div class="control-label">Email</div>
+    <div class="control-label">{{bookingData.email}}</div>
+  </div>
+  <div class="form-group">
+    <div class="control-label">Room Type</div>
+    <div class="control-label">{{bookingData.roomType}}</div>
+  </div>
+  <div class="form-group">
+    <div class="control-label">Check In</div>
+    <div class="control-label">{{bookingData.checkIn | date: 'medium'}}</div>
+  </div>
+  <div class="form-group">
+    <div class="control-label">Check Out</div>
+    <div class="control-label">{{bookingData.checkOut | date: 'medium'}}</div>
+  </div>
+  <div class="form-group">
+    <div class="control-label">Pickup Address</div>
+    <div class="control-label">{{bookingData.pickupAddress}}</div>
+  </div>
+
+  <div class="form-group">
+      <button mat-raised-button color="warn" (click)="onBack()">Back</button>
+    </div>
+</form>
